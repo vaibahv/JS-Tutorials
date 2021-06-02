@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //function defination
+        // disp();
+        // function disp(){
+        //     document.write("hello");
+        // }
+
+        
+   //function expression
+        // var show = function disp(a,b){
+        //     document.write( a + b + "hello"  );
+        // };
+
+        // show(10,20);
+
+        //anonymous function 
+
+      
+    //   var a = function(){
+    //         return "hello";
+    //     }
+    //     document.write(a());
+
+
+    //  function disp(myfun){         // myfun =  function (){ return "hello" })
+    //      return myfun;
+    //  }
+    //  document.write( disp(function (){ return "hello" }) );        //  document.write( function (){ return "hello" }));
+     
+     
+    //  function disp(myfun){         // myfun =  function (){ return "hello" })
+    //      return myfun();            //return "hello";
+    //  }   
+    //  document.write( disp(function (){ return "hello" }) );        //  document.write( function (){ return "hello" }));
+
+
+    //retruning anonymous function 
+
+    // function disp(a){
+       
+    //     return function (b){
+    //         return (a+b);
+    //     }
+
+    // }
+    //  var fun = disp(10);
+    //  document.write(fun(20));
+     
+     //IIFE
+      
+      var a=10;
+
+
+     (function(a,b){ document.write(a+b); })(20,20);
+     document.write(a);
+   
+
+
+
+
+      
+    </script>
+</body>
+</html>
