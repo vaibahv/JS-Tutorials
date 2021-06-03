@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>game</title>
+</head>
+<body>
+    <input type="text" name="" id="num" >
+    <button id="submit"> Submit </button><br>
+    <p id="prev"></p>
+    <p id="err"></p>
+   
+    <script>
+        
+        
+        var counts= 1;
+        var submit = document.getElementById("submit");
+        var prev = document.getElementById("prev");
+      
+        var randomNumber = Math.floor(Math.random()*100);
+        alert(randomNumber);
+           
+             
+             var err = document.getElementById("err");
+             var success = document.getElementById("success");
+             submit.onclick = function(){
+             alert(counts + " attempt");
+       
+                counts = counts + 1;
+            var num = document.getElementById("num").value;
+         
+                  prev.innerHTML += num +" ";
+                  
+            
+                if(randomNumber > num){
+                    err.innerHTML = "";
+                   err.innerHTML = "number is too small";
+                   
+                }
+                 if(randomNumber < num){
+                    err.innerHTML = "";
+                    err.innerHTML = "number is too large";
+                    
+                }
+                if(randomNumber == num){
+             
+                    err.innerHTML = "<span style='color:white;background-color:green;'> You Won </span>";
+                }
+                
+                if(counts > 10){
+                    err.innerHTML = "<span style='color:white;background-color:red;'> You loose </span>";
+                    submit.disabled = true;               
+                }
+                
+                
+               
+              
+               
+        }
+            
+        
+
+    </script>
+</body>
+</html>
