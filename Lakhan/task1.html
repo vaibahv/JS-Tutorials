@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Caclculator</h2>
+    <strong>Enter Operator as follows :</strong>
+    <ul>
+        <li>+ : Addition</li>
+        <li>- : Substraction</li>
+        <li>* : Multiplication</li>
+        <li>/ : Division</li>
+    </ul>
+    <table>
+        <tr>
+            <td>
+                Enter First No.
+            </td>
+            <td>
+                <input type="text" id="num1">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Enter Second No.
+            </td>
+            <td>
+                <input type="text" id="num2">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Enter Operator 
+            </td>
+            <td>
+                <input type="text" id="op">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button id="submit"> Submit </button>
+            </td>
+        </tr>
+    </table>
+    <p id="err"></p>
+    <p id="ans"></p>
+    
+    
+    
+    <script>
+
+
+        //Addition
+        //Normal Function
+        function add(a,b){
+            a=parseInt(a)
+            b=parseInt(b)
+            let result = a+b;
+            return result;
+        }
+
+        //Substraction
+        //Expression Function
+        var sub= function sub(a,b){
+            if (a>b) {
+                return (a-b);
+            } else {
+                return (b-a);
+            }
+        }
+
+        //Multiplication
+        //Anonymus Functio(n
+        var mul = function(a,b){
+            return a*b;
+        }
+
+        //Division
+        //Arrow Function
+        var div = (a,b) => a/b;
+        
+        
+        submit.onclick=function(){
+            //Taking Values From The Form
+            var num1 = document.getElementById("num1").value;
+            var num2 = document.getElementById("num2").value;
+            var op = document.getElementById("op").value;
+            //Checking The Operator
+            //Addition
+            if (op=='+') {
+                var result=add(num1,num2);
+                ans.innerHTML = result;
+            }
+            //Substraction
+            else if (op=='-') {
+                var result = sub(num1,num2);
+                ans.innerHTML = result;        
+            }
+            //Multiplication
+            else if (op=='*') {
+                var result = mul(num1,num2);
+                ans.innerHTML = result;
+            }
+            //Division
+            else if (op == '/') {
+                var result = div(num1,num2);
+                ans.innerHTML = result;
+            }
+            //For Incorrect Operator
+            else{
+                err.innerHTML = "Enter Correct Operator";
+            }
+        }
+    </script>
+
+
+
+
+</body>
+</html>
