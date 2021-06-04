@@ -21,7 +21,7 @@
                 Enter First No.
             </td>
             <td>
-                <input type="text" id="num1">
+                <input type="number" id="num1">
             </td>
         </tr>
         <tr>
@@ -29,7 +29,7 @@
                 Enter Second No.
             </td>
             <td>
-                <input type="text" id="num2">
+                <input type="number" id="num2">
             </td>
         </tr>
         <tr>
@@ -57,8 +57,8 @@
         //Addition
         //Normal Function
         function add(a,b){
-            a=parseInt(a)
-            b=parseInt(b)
+            a=Number(a);
+            b=Number(b);
             let result = a+b;
             return result;
         }
