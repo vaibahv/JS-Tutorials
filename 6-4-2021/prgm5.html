@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW@5</title>
+</head>
+<body>
+    
+    <h1>Write a Program to enter a number and print it in words.</h1>
+    
+    <table>
+        <tr>
+            <td>
+                Enter No.
+            </td>
+            <td>
+                <input type="number" id="num">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button id="submit"> Calculate </button>
+            </td>
+        </tr>
+    </table>
+    <p id="ans"></p>
+
+
+    <script>
+        submit.onclick = function() {
+            var num = Number(document.getElementById("num").value); 
+            var str=""    
+            while (num!=0) {
+                var digit = num%10;
+                var next_num = Math.floor(num/10);
+                var num = next_num;
+                switch (digit) {
+                    case 0:
+                        temp="ZERO"
+                        break;
+                    case 1:
+                        temp="ONE"
+                        break;
+                    case 2:
+                        temp="TWO"
+                        break;
+                    case 3:
+                        temp="THREE"
+                        break;
+                    case 4:
+                        temp="FOUR"
+                        break;
+                    case 5:
+                        temp="FIVE"
+                        break;
+                    case 6:
+                        temp="SIX"
+                        break;
+                    case 7:
+                        temp="SEVEN"
+                        break;
+                    case 8:
+                        temp="EIGHT"
+                        break;
+                    case 9:
+                        temp="NINE"
+                        break;
+            }
+            str = temp + " "+ str;
+            }    
+            ans.innerHTML = str;
+        }
+    </script>
+</body>
+</html>

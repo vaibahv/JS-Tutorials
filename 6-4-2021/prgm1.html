@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW@1</title>
+</head>
+<body>
+    <h1>Write a Program to calculate product of digits of a number.</h1>
+    
+    <table>
+        <tr>
+            <td>
+                Enter No.
+            </td>
+            <td>
+                <input type="number" id="num">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button id="submit"> Calculate </button>
+            </td>
+        </tr>
+    </table>
+    <p id="ans"></p>
+    
+    <script>
+
+        submit.onclick = function() {
+            var num = Number(document.getElementById("num").value);
+            var product = 1;
+            if (num==0) {
+                var product = 0;
+            } 
+            else {
+                while (num!=0) {
+                var digit = num%10;
+                var product = product * digit;
+                var next_num = Math.floor(num/10);
+                var num = next_num;
+            }    
+            }
+            
+            ans.innerHTML = product;
+        }
+        
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>

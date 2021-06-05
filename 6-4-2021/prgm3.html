@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW@3</title>
+</head>
+<body>
+    <h1>Write a Program to find HCF (GCD) of two numbers.</h1>
+    <table>
+        <tr>
+            <td>
+                Enter 1st No.
+            </td>
+            <td>
+                <input type="number" id="num1">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Enter 2nd No.
+            </td>
+            <td>
+                <input type="number" id="num2">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button id="submit"> Check </button>
+            </td>
+        </tr>
+    </table>
+    <p id="ans"></p>
+
+    <script>
+
+
+        function gcd(a,b) {
+            var r= 1;
+            for (let i = 2; i <= a; i++) {
+                if (a%i==0 && b%i==0){
+                    if (i > r){
+                        var r=i;
+                    }
+                }
+            }
+            ans.innerHTML = r;     
+        }
+        // gcd(12,48);
+
+        submit.onclick = function(){
+            var num1 = Number(document.getElementById("num1").value);
+            var num2 = Number(document.getElementById("num2").value);
+            if(num1 < num2){
+                gcd(num1,num2);
+            }
+            else{
+                gcd(num2,num1);
+            }
+        }
+    </script>
+</body>
+</html>
