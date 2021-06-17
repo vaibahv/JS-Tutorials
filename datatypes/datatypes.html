@@ -85,6 +85,21 @@
      doc
      
    */
+   var foo = function foo(){
+            console.log(foo === foo);
+        }
+        foo();
+        console.log(String("hello") === `hello`);
+        
+        //  function(){
+        //   var a=10;
+        //   if(a>8){
+        //       a=8;
+        //   }
+        //   alert(8);
+        // }
+        console.log(null == undefined);
+        console.log((function(){ console.log("hi");})());
     </script>
 </body>
 </html>
