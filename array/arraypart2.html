@@ -77,7 +77,7 @@
       
 //    let arr =  ["amravati","pune","mumbai","banglore"];
  
-//     document.write(arr.slice(9,10));
+    // document.write(arr.slice(2,3));
  
 // 9.toString()
 //  let arr =  ["amravati","pune","mumbai","banglore"];
@@ -89,12 +89,12 @@
 //10. Array.isArray();
 
 //  let arr =  ["amravati","pune","mumbai","banglore"];
-    //  document.write( Array.isArray("amravati"));
+    //  document.write( Array.isArray(["amravati"]));
 
     //11.splice method();
 
     // let arr =  ["amravati","pune","mumbai","banglore"];
-    // document.write (arr.splice(1,0,"ABC","XYZ") + "<br>");
+    // document.write (arr.splice(1,1,["ABC","XYZ"]) + "<br>");
     // document.write(arr);
 
     // 12. indexOf();
@@ -124,6 +124,98 @@
     // let arr =  ["amravati","pune","mumbai","banglore"];
     // arr.unshift("hyd");
     // document.write(arr);
+
+    // 17. map();
+
+//    let arr5 = [10,20,30,40,50,10];
+
+//    let newArr  = arr5.map(function(value,index, arr_name){
+//      if(value>30)    
+//       return value;
+
+//     });
+
+   
+
+//    document.write(newArr);
+
+    //18. filter();
+
+    let arr5 = [10,20,30,40,50,10];
+
+let newArr  = arr5.filter(function(value){
+     return value > 30;
+
+ });
+document.write(newArr);
+
+
+ //19. reduce ();
+
+//      let arr5 = [10,20,30,40,50,10];
+
+// let sum = arr5.reduce(function(total,value){       
+//      return total *= value;
+
+//  });
+// document.write(sum);
+
+// 20. reduceRight();
+
+// let arr5 = [10,20,30,40,50,10];
+
+// let sum = arr5.reduceRight(function(total,value){       
+//      return total *= value;
+
+//  });
+// document.write(sum);
+
+// 21. every();
+
+// let arr5 = [10,20,30,40,50,10];
+
+// let bool = arr5.every(function(value){       
+//      return value > 30;
+
+//  });
+// document.write(bool);
+
+//22. some();
+
+// let arr5 = [10,20,30,40,50,10];
+
+// let bool = arr5.some(function(value){       
+//      return value > 30;
+
+//  });
+// document.write(bool);
+
+//23.lastIndexOf();
+
+// let arr5 = [10,20,30,40,50,10];
+ 
+//    let pos = arr5.lastIndexOf(10);
+//    document.write(pos);
+
+
+// let person = {firstname:"vaibhav",lastname:"gadge",interest:"playing Cricket",
+// fun:function(){
+//     return (this.firstname + this.lastname);
+// }
+// };
+
+//  let fullname = person.fun();
+//  console.log(fullname);
+
+
+
+
+
+
+
+
+
+
 
 
 
