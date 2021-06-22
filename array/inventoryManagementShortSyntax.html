@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Inventory Management </title>
+</head>
+<body>
+    <script>
+        
+          const inventoryList = ()=>{
+          let inventory = [];
+          let add = (item) => {         
+            if(item.itemCount == undefined){
+                item.itemCount = 1;
+            }
+      
+          let repeat =  inventory.filter((element) => element.itemName ==  item.itemName);
+                  if(repeat == ""){
+                      inventory.push(item);
+                  }
+                  else{
+                      inventory.map((element) =>{
+                        if(element.itemName == item.itemName){   
+                            if(!isNaN(item.itemCount)){                  
+                           element.itemCount += item.itemCount;
+                            }
+                            else{
+                            ++element.itemCount;
+                        }
+                        }
+                      
+
+                      });
+
+                  }
+                //   console.log(inventory);         
+          }
+        
+            
+          let remove = (item) =>{
+          let index = inventory.findIndex( (element) =>(element.itemName == item.itemName));
+        // let index = inventory.indexOf(item);
+       
+             inventory.splice(index,1);
+         } 
+          let update = (item) => {
+             inventory.map((element) => {
+                 if(element.itemName == item.itemName){
+                   
+                     element.itemCount = Number(item.itemCount);
+                   
+                 }
+
+             });
+          }
+          let list = (item) =>{
+            let result =  inventory.filter((element) =>(element.itemName == item.itemName));
+             return result; 
+          }
+          let listall = () =>{
+              return inventory;
+          }
+
+          return{
+              additem:add,
+              removeitem:remove,
+              updateitem:update,
+              listitem:list,
+              listall:listall
+          }
+        
+         }
+
+        function main(commands){
+            let inventoryObj = inventoryList();
+            commands.forEach( (command) => {
+            let allParameters = command.split(" ");
+            let currentCommand = allParameters[0];
+            let name = allParameters[1];
+            let count = Number(allParameters[2]);
+            let item = {
+                itemName:name,
+                itemCount:count
+            };
+
+            if(currentCommand == "add"){
+                inventoryObj.additem(item);             
+            }
+            if(currentCommand == "remove"){
+                inventoryObj.removeitem(item);  
+            }
+            if(currentCommand == "update"){
+                inventoryObj.updateitem(item);    
+            }
+            if(currentCommand == "list"){
+               console.log( inventoryObj.listitem(item));
+            }
+            if(currentCommand == "listall"){
+               console.log( inventoryObj.listall(item));
+
+            }
+
+           });                
+        }
+
+        main(["add chair 10","add chair 20","add chair", "add chair","add sofa 1","list chair","listall" , "remove sofa" ,"listall"]);
+    </script>
+</body>
+</html>
