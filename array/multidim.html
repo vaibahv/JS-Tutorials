@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //defination and declaration of multi array
+        // let arr = [
+        //     [1,2,3],
+        //     [4,5,6],
+        //     [7,8,9]];
+
+        //using array constructor  
+        // let arrConst = new Array([1,2,3],[4,5,6],[7,8,9]);
+
+        //accessing Multi array
+
+        // console.log(arr[0][1]);
+
+        //how to get input into multi array and display its values
+
+        let arr = [];
+        
+        let rows = window.prompt("Enter no of rows : " );
+        let cols = window.prompt("Enter no of cols : " );
+        for(let i =0 ;i<rows;i++){
+            arr[i] = [];                 // arr[0] = [],arr[1] = []
+        } 
+
+        for(let i=0; i<rows;i++){
+            for(let j =0;j<cols;j++){
+                arr[i][j] = window.prompt(`Enter ${i} ${j} element`);
+            }
+        }
+        
+        //displaying multi array
+
+        for(let i=0; i<rows;i++){
+            for(let j =0;j<cols;j++){
+              document.write(i + " " + j +arr[i][j] + " | " );
+            }
+            document.write("<br>");
+        }
+
+
+
+        
+
+
+    </script>
+</body>
+</html>
