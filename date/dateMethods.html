@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2,h3{
+            padding:0;
+            margin:0;
+        }
+    </style>
+</head>
+<body>
+    <h1> Ganpati Festival CountDown </h1>
+    <h3> Days  / Hours / Min / Sec </h3>
+    <h1 id="h1"> </h1>
+    <script>
+        //1. Set Date Methods 
+
+        // setDate()	Set the day as a number (1-31)
+        // setFullYear()	Set the year (optionally month and day)
+        // setHours()	Set the hour (0-23)
+        // setMilliseconds()	Set the milliseconds (0-999)
+        // setMinutes()	Set the minutes (0-59)
+        // setMonth()	Set the month (0-11)
+        // setSeconds()	Set the seconds (0-59)
+        // setTime()	Set the time (milliseconds since January 1, 1970)
+
+        // let dateobj = new Date();
+        // document.write(dateobj + "<br>");
+        // dateobj.setDate(20);
+        // document.write("setDate(20) " + dateobj + "<br>");
+
+        // dateobj.setFullYear(2020,5,12);
+        // document.write("setFullYear(2020) " + dateobj + "<br>");
+
+        // dateobj.setHours(12);
+        // document.write("setHours(2020) " + dateobj + "<br>");
+
+        // dateobj.setMilliseconds(2000);
+        // document.write("setMiliseconds(2000) " + dateobj + "<br>");
+
+        // dateobj.setMinutes(50);
+        // document.write("setMinutes(50) " + dateobj + "<br>");
+
+        // dateobj.setMonth(10);
+        // document.write("setMonth(10) " + dateobj + "<br>");
+
+        // dateobj.setSeconds(50);
+        // document.write("setSeconds(50) " + dateobj + "<br>");
+
+        // dateobj.setTime(50000);
+        // document.write("setTime(50000) " + dateobj + "<br>");
+
+        // 2. getMethods()
+       
+        // getFullYear()	Get the year as a four digit number (yyyy)
+        // getMonth()	Get the month as a number (0-11)
+        // getDate()	Get the day as a number (1-31)
+        // getHours()	Get the hour (0-23)
+        // getMinutes()	Get the minute (0-59)
+        // getSeconds()	Get the second (0-59)
+        // getMilliseconds()	Get the millisecond (0-999)
+        // getTime()	Get the time (milliseconds since January 1, 1970)
+        // getDay()	Get the weekday as a number (0-6)
+        // Date.now()	Get the time. ECMAScript 5.
+
+
+        // let dateobj = new Date();
+        // document.write(dateobj + "<br>");
+       
+        // document.write(dateobj.getFullYear() + "<br>");
+        // document.write(dateobj.getMonth() + "<br>");
+        // document.write(dateobj.getDate() + "<br>");
+        // document.write(dateobj.getHours() + "<br>");
+        // document.write(dateobj.getMinutes() + "<br>");
+        // document.write(dateobj.getSeconds() + "<br>");
+        // document.write(dateobj.getTime() + "<br>");
+        // document.write(dateobj.getDay() + "<br>");
+        // document.write(Date.now());
+
+
+    // 3. format date 
+    //     let dateobj = new Date();
+    //     document.write(dateobj);
+    //     let month = dateobj.getMonth()
+    //     document.write( demo(month) + "<br>");
+
+    //   function demo(month){
+    //            arr = ['jan','feb','mar','apr','may','june','july','aug','sept','oct','nov','dec'];
+    //            return arr[month];
+    //     } 
+      
+    // setInterval(() => {
+    //         demo();
+    //      }, 1000);
+         
+    //         demo(dateobj);
+     
+    //  function demo(){
+    //       let dateobj = new Date();
+    //       let h1 = document.getElementById("h1");
+    //       let date = dateobj.getDate();
+    //       let Month = dateobj.getMonth(); 
+    //       let year = dateobj.getFullYear(); 
+    //       let sec = dateobj.getSeconds(); 
+    //       let min = dateobj.getMinutes(); 
+ 
+
+    //       h1.innerHTML = date + " / " + ++Month + " / " + year + " / " +"<br>" + min +":" +sec;
+
+    //  }
+
+    // 4. Convert date to string 
+    //  document.write(dateobj.toString() + "<br>");
+    //  document.write(dateobj.toUTCString() + "<br>");
+    //  document.write(dateobj.toGMTString() + "<br>");
+
+    // date formats
+     
+    //1. ISO Dates
+    // let dateobj = new Date("2018");
+    // document.write(dateobj + "<br>");
+    // let dateobj = new Date("2018-05-12");
+    // document.write(dateobj);
+      
+    // let dateobj = new Date("2018-05-12T12:12:12Z");
+    // document.write(dateobj);
+
+    // const d = new Date("2015-03-25T12:00:00+06:30");
+    // document.write(d);
+
+    // let name = "10";
+    // let num = +name;
+    // document.write(typeof(name) + " <br>" + num); 
+
+//    "use strict";
+//     a= 20;
+//     document.write(a);
+
+
+     // CountDown Timer
+     function countDown(){
+          let h1 = document.getElementById("h1");
+      
+      let currentDate = new Date();
+      let eventDate = new Date("10 september 2021");
+      console.log(currentDate +" // " + eventDate);
+
+      let currentTime = currentDate.getTime();
+      console.log("current Time : " +currentTime);
+
+      let eventTime = eventDate.getTime();
+      console.log("event Time : " + eventTime); 
+
+      let remTime = eventTime - currentTime;
+     console.log("remTime : " + remTime);
+
+      let sec = Math.floor(remTime/1000);              // 200sec
+     console.log("Sec : " + sec);
+        
+      let min = Math.floor(sec/60);
+      console.log("Min :" + min);                    // 120min
+
+      let hrs = Math.floor(min/60);                    // 72hrs
+      console.log("hrs :" + hrs);
+
+      let days = Math.floor(hrs/24);                   // days are proper 
+
+      hrs %= 24;
+      min %= 60;
+      sec %= 60;
+      
+    h1.innerHTML =  days + " / " +  hrs+ " / " + min + " / " + sec ;
+
+     }
+    //  countDown();
+   
+     setInterval(() => {
+         countDown();
+     }, 1000);
+
+
+
+
+
+
+
+
+
+    
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+    </script>
+</body>
+</html>
