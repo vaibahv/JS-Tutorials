@@ -13,19 +13,25 @@
 
    <p id="paraFirst" class="paraFirst paraSecond"> 
        Paragraph
-       <span> First Span Inside Paragraph </span>
+       <span id ="spanFirst"> First Span Inside Paragraph </span>
        <em> First em Inside Paragraph </em> 
        <span>Second Span Inside Paragraph </span>
    </p>
 
    <p id="paraSecond" class="paraFirst"> Second Paragragh Inside Body </p>
+   <div id ="showPara" class="showDiv">
 
+    <p> First Paragraph Inside Div </p>
+    <p> second Paragraph Inside Div </p>
+ 
+  </div>
    <div id ="showPara" class="showPara">
 
        <p> First Paragraph Inside Div </p>
        <p> second Paragraph Inside Div </p>
     
    </div>
+   
 
 
     <script>
@@ -59,6 +65,56 @@
 
     // let paraFirst = document.body.getElementsByClassName("paraFirst");
     // console.log(paraFirst);
+
+    // 3. querySelector();
+
+    //  let para = document.querySelector("p, h1");
+    //  console.log(para);
+
+    // let para = document.querySelector("#showPara, #paraSecond");
+    //  console.log(para);
+    
+    // let para = document.querySelector(".showPara , .paraFirst");
+    //  console.log(para);
+
+    // let para = document.querySelector("div[class]");
+    //   console.log(para);
+
+    //4. querySelectorAll();
+   
+    // let para = document.querySelectorAll("p");
+    //  console.log(para);
+
+
+    // let para = document.querySelectorAll(".showPara , .paraFirst");
+    //  console.log(para);
+
+    // let para = document.querySelectorAll("#showPara , .paraFirst");
+    //  console.log(para);
+
+    // let para = document.querySelectorAll("title[class = 'paraFirst']");
+    //  console.log(para);
+
+    // let para = document.querySelector("p#paraFirst");
+    //   let span  =  para.querySelector("span#spanFirst");
+    //  console.log(span);
+
+    // let para = document.querySelector("p#paraFirst > span#spanFirst");
+    
+    //  console.log(para);
+
+    // console.log(document.URL);
+
+
+
+
+    
+
+    
+
+    
+
+
 
 
     
