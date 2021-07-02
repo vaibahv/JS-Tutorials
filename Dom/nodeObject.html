@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="myid" class="myclass"> This is H1 Element <!-- This is Comment --> </h1>
+
+    <p id="myid1">This is Paragraph </p>
+    
+    <script>
+
+    //1. node object properties 
+
+        // i) how to apply node object properties on document Node
+        // console.log (document.nodeName);
+        // console.log(document.nodeType);
+        // console.log(document.nodeValue);
+
+        // ii) how to apply node object properties on html element Node
+        //   let h1 = document.getElementById('myid');
+        //   console.log(h1.nodeName);
+        //   console.log(h1.nodeType);
+        //   console.log(h1.nodeValue);
+
+        // iii) how to apply node object properties on html Text Node
+        //   console.log(h1.firstChild.nodeName);
+        //   console.log(h1.firstChild.nodeType); 
+        //   console.log(h1.firstChild.nodeValue);
+
+        // iv) how to apply node object properties on html Comment Node
+        //   console.log(h1.firstChild.nextSibling.nodeName);
+        //   console.log(h1.firstChild.nextSibling.nodeType); 
+        //   console.log(h1.firstChild.nextSibling.nodeValue);
+
+    // 2. properties of attributes object
+
+         let h1 = document.getElementById('myid');
+
+        // i) how to apply Attributes object properties on html Element
+        // console.log( h1.attributes[1]);
+        // console.log(h1.attributes[0].nodeName);
+        // console.log(h1.attributes[0].nodeValue);
+
+        // console.log(h1.attributes[1].nodeName);
+        // console.log(h1.attributes[1].nodeValue);
+
+        // console.log(h1.attributes.length);
+         let len = h1.attributes.length
+
+       for(let i=0;i<len; i++){
+        // console.log(h1.attributes[i].nodeName);
+        // console.log(h1.attributes[i].nodeValue);   
+        
+         // nodeName and nodeValue in attributes  object  will removed in future.
+         //so use name and value property instead;
+        // document.write(h1.attributes[i].nodeName + " = " + h1.attributes[i].nodeValue + "<br>");
+         document.write(h1.attributes[i].name + " = " + h1.attributes[i].value + "<br>");
+
+
+       }
+
+
+
+
+        
+
+
+
+
+
+
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
