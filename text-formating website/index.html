@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Formater Website</title>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            background-color: gray;
+        }
+        header{
+            width:100%;
+            height:130px;
+            background-color:burlywood;
+            text-align: center;
+        }
+        #page{
+            width:1000px;
+            height:560px;
+            margin:5px auto;
+            background-color: white;
+            font-size: 20px;
+            outline: none;
+            padding:10px;
+
+        }
+        button{
+            height:40px;
+            width:136px;
+            float: left;
+            position: relative;
+           top:40px;
+           margin-left:3px;
+           
+        }
+        h2{
+            margin:0;
+            padding:0;
+            color:white;
+            font-family: scream real;
+           position: relative;
+           top:10px;
+         
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h2>Text Editor</h2>
+       <button id="bold" onclick = "bold()" title = "BOLD (ctrl + b)"><b>b</b></button>
+       <button id="italic" onclick = "italic()" title = "ITALIC (ctrl + i)"><i>i</i></button>
+       <button id="underline" onclick = "underline()" title = "underline (ctrl + u)"><u>u</u></button>
+       <button id="sup" onclick = "sup()">a <sup>2</sup></button>
+       <button id="sub"onclick = "sub()">a <sub>2</sub></button>
+       <button id="left" style="text-align: left;" onclick = "left()">left</button>
+       <button id="center" style="text-align: center;" onclick = "center()">center</button>
+       <button id="right"style="text-align: right;" onclick = "right()">right</button>
+       <button id="delete" onclick = "delet()">delete</button>
+
+       <button id="undo" onclick = "undo()">undo</button>
+       <button id="redo" onclick = "redo()">redo</button>
+
+    </header>
+    <div id="page" contenteditable="true" spellcheck="false">
+
+    </div>
+     
+     <script>
+         function bold(){
+             document.execCommand("bold");
+             
+         }
+         function italic(){
+             document.execCommand("italic");
+             
+         }
+         function underline(){
+             document.execCommand("underline");
+             
+         }
+         function sup(){
+             document.execCommand("superscript");
+             
+         }
+         function sub(){
+             document.execCommand("subscript");
+             
+         }
+         function left(){
+             document.execCommand("justifyLeft");
+             
+         }function right(){
+             document.execCommand("justifyRight");
+             
+         }
+         function center(){
+             document.execCommand("justifyCenter");
+             
+         }
+         function undo(){
+             document.execCommand("undo");
+             
+         }
+         function redo(){
+             document.execCommand("redo");
+             
+         }
+         function delet(){
+             document.execCommand("delete");
+             
+         }
+     </script>
+
+
+     
+</body>
+</html>
