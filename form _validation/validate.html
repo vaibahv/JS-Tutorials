@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Validation</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+   
+    <fieldset>
+        <legend> Sign Up </legend>
+
+
+        <form action="" onsubmit ="return submits()">
+
+            <table>
+                <tr>
+                    <td align="right"> 
+                          <img src="firstname.png" alt="" id="idmg1">
+                          <img src="fname.png" alt="" id="idmg10">
+                   </td>
+                  <td>
+                       
+                        <input type="text" name="fname" id="fname" placeholder="Firstname" onblur = "fnames()" onclick="fnames_close()">
+             
+                        <img src="cross.png" alt="" id="fimg">
+                        <img src="check.png" alt="" id="checkfimg">
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right" position="relative">  
+                         <img src="firstname.png" alt="" id="idmg2">
+                         <img src="fname.png" alt="" id="idmg11">
+                        </td>
+                    <td>
+                        <input type="text" name="lname" id="lname" placeholder="Lastname" onblur="lnames()" onclick="lnames_close()">
+        
+        <img src="cross.png" alt="" id="limg">
+        <img src="check.png" alt="" id="checklimg">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right" style = "position: relative;"> 
+                         <img src="mobile.png" alt="" id="idmg3">
+                         <img src="mob_not.png" alt="" id="idmg8">
+                         <img src="length.png" alt="" id="idmg9">
+                         
+                        </td>
+                    <td>
+                        <input type="text" name="" id="mobile" placeholder="Mobile Number " onblur="mobiles()" onclick = "mobiles_close()">
+        
+                        <img src="cross.png" alt="" id="mimg">
+                        <img src="check.png" alt="" id="checkmimg">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right"> 
+                        
+                        <img src="date.png" alt="" id="idmg4">
+                    </td>
+                    <td>
+                        
+            <input type="date" name="" id="date" placeholder="Date" onblur="dates()" onclick = "dates_close();">
+        
+            <img src="cross.png" alt="" id="dimg">
+            <img src="check.png" alt="" id="checkdimg">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right"> 
+                        
+                        <img src="email.png" alt="" id="idmg5">
+                        <img src="val_email.png" alt="" id="idmg12">
+                    </td>
+                    <td>
+                        <input type="email" name="" id="email" placeholder="Email" onblur="emails()" onclick = "emails_close()">
+
+                        <img src="cross.png" alt="" id="eimg">
+                        <img src="check.png" alt="" id="checkeimg">
+                    </td>
+                </tr>
+                <tr >
+                    <td align="right" style="position: relative;"> 
+                        
+                        <img src="pass.png" alt="" id="idmg6">
+                    </td>
+                    <td>
+                        
+                        <input type="password" name="" id="pwd" placeholder="Password" onblur="setTimeout(passwords, 211)"
+                        onclick = "passwords_close();passwordDiv()" oninput = passoninput()>
+                        
+                        <img src="cross.png" alt="" id="pimg">
+                        <img src="check.png" alt="" id="checkpimg">
+
+                        <div class="pass-div" id="passdiv">
+                            <p id="pass-header"> Use password for: </p>
+                            <p id="pass-hint-text" onclick = "passclose();">(no username)</p>
+                        </div>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right"> 
+                        
+                        <img src="repass.png" alt="" id="idmg7">
+                    </td>
+                    
+                    <td> 
+                          <input type="password" name="" id="repwd" placeholder="Re-Enter Password" onblur="repasswords()"onclick = "repasswords_close()">
+            
+                        <img src="cross.png" alt="" id="rimg">
+                        <img src="check.png" alt="" id="checkrepimg">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="checkbox" name="checkbox" id="checkbox"  >
+                        <label for="checkbox"> I Accept </label><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                           
+            <input type="submit" id="submit" value=" Sign Up " >
+                </td>
+            </tr>
+            </table>
+
+       
+        </form>
+    </fieldset>
+    
+   <script src="script.js"></script>
+</body>
+
+</html>

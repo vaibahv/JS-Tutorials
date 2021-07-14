@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+    padding:0;
+}
+fieldset{
+    height:540px;
+    width:800px;
+    border:1px solid #000;
+    margin:40px auto;
+   
+}
+legend{
+    font-size: 26px;
+    font-family: sans-serif;
+  
+}
+form{
+    
+    height:540px;
+    width:800px;
+}
+input{
+    width:70%;
+    height:40px;
+    border:1px solid #bbb;
+    margin-top: 5px;
+    padding-left:10px;
+  
+}
+input:focus{
+    border: 2px solid #bbb;
+    outline: none;
+}
+input[type=checkbox]{
+  width:inherit;
+  height:inherit;
+  width: 20px;
+  height:25px;
+ 
+    border:2px solid #bbb;
+   margin-top:5px;
+    margin-left:-45%;
+    
+}
+label{
+   position: relative;
+   top:-7px;
+}
+input[type=submit]{
+    width:40%;
+    height:40px;
+    margin-top:10px;
+    margin-left:-6%;
+    background-color: #0e4b84;
+    opacity: 0.8;
+    color:white;
+    font-family: sans-serif;
+    font-size: 20px;
+    border: none;
+   cursor: pointer;
+}
+#pimg,#rimg,#fimg,#limg,#mimg,#dimg,#eimg,#checkfimg,#checkpimg,#checkrepimg,#checkdimg,#checkmimg,#checklimg,#checkeimg{
+    height:26px;
+    width:26px;
+     position: absolute;
+    /* left:-35px;  */
+    top:10px; 
+    display: none;
+}
+/* #fimg,#checkfimg{
+
+} */
+
+table{
+    width:100%;
+    height:auto;
+}
+/* table,td{
+ 
+} */
+td{
+    position: relative;
+}
+td[align="right"]{
+    width:150px;
+    height:auto;
+}
+#idmg1,#idmg2,#idmg3,#idmg4,#idmg5,#idmg6,#idmg7{
+    display: none;
+}
+#idmg3,#idmg8,#idmg9,#idmg1,#idmg10,#idmg2,#idmg11,#idmg5,#idmg12{
+    position: absolute;
+    top:0;
+    left:4px;
+    display: none;
+
+}
+.pass-div{
+    width:70%;
+    height:auto;
+    position: absolute;
+    border-top:1px solid black;
+    border-left:1px solid black;
+    border-right:1px solid black;
+    box-sizing: border-box;
+    display: none;
+    z-index: 1;
+    background-color: white;
+}
+#pass-header,#pass-hint-text{
+    margin: 0;
+    padding:0;
+    line-height:22px;
+    padding:3px;
+}
+
+#pass-hint-text:hover{
+     background-color: cornflowerblue;
+     cursor: pointer;
+}

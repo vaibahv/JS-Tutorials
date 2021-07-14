@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoComplete</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="search-box">
+      <input type="text" class="search-input" id="search-input">
+      <div class="suggestion" id="suggestions">
+        <ul id="suggestion-list">
+      
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      let questions = [
+               {ques: " What Is The Price Of Laptop" },
+               {ques: " How Do You Do " },
+               {ques: " Strangers Thing Online Download " },
+               {ques: " Dark Online Download " },
+               {ques: " Lost In Space Online Download " },
+               {ques: " Family Man  Online Download " },
+               {ques: " What is the Distance of earth form Sun " }
+              ];
+      let serachInput = document.getElementById("search-input");
+      let suggestions = document.getElementById("suggestions");
+      let suggestionList = document.getElementById("suggestion-list");
+
+      suggestions.style.display = "none";
+
+      const newResultClick = (event) =>{
+            let inputValue =  event.target.innerHTML;
+            serachInput.value = inputValue;
+            hideResultDesign();     
+      }
+
+      const showResultDesign = ()=>{
+          suggestionList.innerHTML = "";
+            suggestions.style.display = "";
+            serachInput.style.borderBottomLeftRadius = "0";
+            serachInput.style.borderBottomRightRadius = "0";
+            serachInput.style.boxShadow = "none";
+      }
+
+     const hideResultDesign = () => {
+              suggestions.style.display = "none";
+              serachInput.style.borderBottomLeftRadius = "20px";
+              serachInput.style.borderBottomRightRadius = "20px";
+      }   
+       
+        const showResult = (filterResults)=>{
+          if(filterResults.length){
+
+          showResultDesign();
+
+            filterResults.forEach((result) => {
+              let newResult = document.createElement("li");
+              newResult.textContent = result.ques;
+              suggestionList.appendChild(newResult);
+              newResult.onclick = newResultClick;            
+            });
+          }
+          else{
+            hideResultDesign();
+          }
+         
+        }
+
+            const onInputChange = (event) =>{
+              let searchValue = event.target.value;
+
+              let filterResults = questions.filter((searchElement) =>{
+                return searchElement.ques.toLowerCase().includes(searchValue.toLowerCase());
+              } );
+ 
+               showResult(filterResults);
+
+            }
+
+            const onWebpageClick = (event) => {
+             if(event.target.contains(suggestions)){  
+                hideResultDesign();
+              }
+
+            }
+
+      serachInput.oninput = onInputChange;
+      document.onmousedown = onWebpageClick;
+
+
+
+
+
+    </script>
+
+</body>
+</html>

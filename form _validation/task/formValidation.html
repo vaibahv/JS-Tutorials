@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src="script.js"></script>
+
+<style>
+
+
+input[type=text],[type=password],[type=date],[type=number]{
+	float:left;
+	width:92%;
+	height:40px;
+	background-color:white;
+	border:1px solid #0d0d0d;
+	padding:10px;
+	box-sizing:border-box;
+
+	}
+
+button[type="submit"]{
+	width:62%;
+	height:40px;
+	background-color:white;
+	border:1px solid #0d0d0d;
+	padding:10px;
+	box-sizing:border-box;
+	background-color:navy;
+	color:white;
+
+}
+
+
+input[type="checkbox"] {
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+}
+input[type="checkbox"] + label:before {
+  border: 1px solid #333;
+  content: "\00a0";
+  display: inline-block;
+  font: 16px/1em sans-serif;
+  height: 16px;
+  margin: 0 .25em 0 0;
+  padding: 0;
+  vertical-align: top;
+  width: 16px;
+}
+input[type="checkbox"]:checked + label:before {
+  background: #fff;
+  color: #333;
+  content: "\2713";
+  text-align: center;
+}
+input[type="checkbox"]:checked + label:after {
+  font-weight: bold;
+}
+
+input[type="checkbox"]:focus + label::before {
+    outline: rgb(59, 153, 252) auto 5px;
+}
+
+button:disabled{
+	border:none;
+	background-color:rgba(0,0,128,0.8);
+	cursor:not-allowed;
+	color:lavender;
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div style="width:50%;margin:0 auto;">
+<fieldset>
+<legend><font color="navy" size="5" face="sans-serif" >SIGN IN</font></legend>
+<form>
+
+<table width="100%" height="500">
+
+
+<tr>
+
+<td>
+
+<input type="text" name="first_name" placeholder="First Name" id="fname" onfocusout="firstName()">
+ <img id="imag_fn" alt="s" width="40" height="40" style="float:left;padding-left:10px;display:none;">
+
+
+</td>
+
+</tr>
+
+<tr>
+<td>
+<input type="text" name="last_name" placeholder="Last Name" id="lname"
+ onfocusout="lastName()">
+ <img id="imag_ln" width="40" height="40" style="float:left;padding-left:10px;display:none;">
+</td>
+</tr>
+
+<tr>
+
+<td align="center">
+<input type="number" name="mobile_number" placeholder="Mobile Number"  id="number" onfocusout="mnumber()" >
+<img id="imag_mn" src="" width="40" height="40" style="float:left;padding-left:10px;display:none;">
+</td>
+</tr>
+
+<tr>
+<td align="center">
+<input type="date" name="dob" id="dob" onfocusout="dobirth()">
+<img id="imag_dob" src="" width="40" height="40" style="float:left;padding-left:10px;display:none;">
+</td>
+</tr>
+
+
+<tr>
+<td align="center">
+<input type="text" name="email" placeholder="Email"  id="e_mail"  onfocusout="mail()">
+<img id="imag_ml" src="" width="40" height="40" style="float:left;padding-left:10px;display:none;">
+</td>
+</tr>	
+
+<tr>
+<td align="center">
+<input type="text" name="Remail" placeholder="Re-Email"  id="re_mail" onfocusout="reEmail()" >
+<img id="imag_rml" src="" width="40" height="40" style="float:left;padding-left:10px;display:none;">
+</td>
+</tr>
+
+<tr>
+<td align="center">
+<input type="password" name="password" placeholder="Password"  id="pwd" onfocusout="pd()" >
+<img id="imag_pwd" src="" width="40" height="40" style="float:left;padding-left:10px;display:none;">
+</td>
+</tr>
+
+<tr>
+<td>
+<input type="checkbox"  name="terms&cond"   id="checkCond" onfocusout="checkCond()">
+<label for="checkCond">I Accept</label>
+</td>
+</tr>
+
+
+<tr>
+<td align="center">
+<button type="submit" id="sbmt_btn"  disabled>Sign In</button>
+</td>
+</tr>
+
+
+</table>
+
+</form>
+</div>
+<body>
+</html>
